@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 const useFetch = (url) => {
-  const [body, setBody] = useState(null)
+  const [data, setData] = useState(null)
   const [isPending, setIsPending] = useState(true);
   const [error, setError] = useState(null);
 
@@ -18,8 +18,8 @@ const useFetch = (url) => {
           }
           return res.json();
         })
-        .then((data) => {
-          setBody(data);
+        .then((myData) => {
+          setData(myData);
           setIsPending(false);
           setError(null);
         })
@@ -39,7 +39,7 @@ const useFetch = (url) => {
   }, [url]) //empty array: only run it on initial render
 
   return {
-    body,
+    data,
     isPending,
     error
   }

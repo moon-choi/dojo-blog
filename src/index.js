@@ -1,3 +1,5 @@
+//this file runs the react app.
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
