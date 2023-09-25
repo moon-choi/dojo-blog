@@ -17,15 +17,14 @@ const Home = () => {
     })
   }
 
-  const handleClick = (name, e) => {
-    console.log('hello ' + name, e.target)
-  }
+  // const handleClick = (name, e) => {
+  //   console.log('hello ' + name, e.target)
+  // }
 
-  const changeName = () => {
-    setName('luigi'); //this is reactive value. it changes the template. it triggers react to re-render the component.
-    setAge(30);
-  }
-
+  // const changeName = () => {
+  //   setName('luigi'); //this is reactive value. it changes the template. it triggers react to re-render the component.
+  //   setAge(30);
+  // }
 
   return (
     <div className="home">
@@ -33,16 +32,15 @@ const Home = () => {
       {isPending && <div>Loading...</div>}
       {blogs && //conditional rendering: logical and.
         <>
-          <BlogList blogs={blogs} title="All blogs" handleDelete={handleDelete} />
-          {/* <BlogList
+          <BlogList blogs={blogs} title="All Posts" total={blogs.length} handleDelete={handleDelete} />
+          <BlogList
             blogs={blogs.filter((blog) => blog.author === 'mario')}
-            title="Mario's blogs" /> */}
+            title="Mario's posts"
+            handleDelete={handleDelete} />
         </>}
-
-      <p>{name} is {age} years old.</p>
+      {/* <p>{name} is {age} years old.</p>
       <button onClick={(e) => handleClick('mario', e)}>Click me</button>
-      <button onClick={changeName}>Change name</button>
-
+      <button onClick={changeName}>Change name</button> */}
     </div>
   );
 }

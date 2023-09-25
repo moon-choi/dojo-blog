@@ -36,7 +36,7 @@ const useFetch = (url) => {
         abortConst.abort(); // it will pause the fetch. 
       }
     }, 200);
-  }, [url]) //empty array: only run it on initial render
+  }, [url]) //if dependency array is an empty array: only run it on initial render
 
   return {
     data,

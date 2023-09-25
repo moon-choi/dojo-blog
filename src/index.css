@@ -61,7 +61,7 @@
 .blog-details div {
   margin: 20px 0;
 }
-.blog-details button {
+.blog-details button, .blog-preview button, .home button {
   background: #f1356d;
   color: #fff;
   border: 0;

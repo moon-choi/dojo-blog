@@ -10,14 +10,13 @@ const Create = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault(); //to not refresh the page
-    const blog = { title, body, author };
-
+    const entry = { title, body, author };
     setIsPending(true);
 
     fetch('http://localhost:8000/blogs', {
       method: 'POST',
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(blog)
+      body: JSON.stringify(entry)
     }).then(() => {
       console.log('new blog added')
       setIsPending(false);

@@ -8,7 +8,7 @@ import NotFound from './NotFound';
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className="app">
         <Navbar />
         <div className="content">
           <Switch>
@@ -22,7 +22,7 @@ function App() {
               <BlogDetails />
             </Route>
             <Route path="*">
-              <NotFound/>
+              <NotFound />
             </Route>
           </Switch>
         </div>
